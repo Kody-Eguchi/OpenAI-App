@@ -40,10 +40,10 @@ export default function Form(props) {
       jobTitle,
       programmingLanguages,
     };
-
+    props.setCoverLetterContent("loading");
     try {
       const response = await axios.post(url, requestData, {
-        responseType: "text", // Specify the desired response type
+        responseType: "text",
       });
       props.setCoverLetterContent(response.data);
       console.log(response.data);
@@ -59,7 +59,7 @@ export default function Form(props) {
       className="needs-validation w-50 mx-auto my-3"
     >
       <div className="form-group">
-        <label for="candidateName">Your Name</label>
+        <label htmlFor="candidateName">Your Name</label>
         <input
           type="text"
           name="candidateName"
@@ -69,7 +69,7 @@ export default function Form(props) {
         />
       </div>
       <div className="form-group">
-        <label for="employerName">Employer Name</label>
+        <label htmlFor="employerName">Employer Name</label>
         <input
           type="text"
           name="employerName"
@@ -79,7 +79,7 @@ export default function Form(props) {
         />
       </div>
       <div className="form-group">
-        <label for="employerAddress">Employer Address</label>
+        <label htmlFor="employerAddress">Employer Address</label>
         <input
           type="text"
           name="employerAddress"
@@ -89,7 +89,7 @@ export default function Form(props) {
         />
       </div>
       <div className="form-group">
-        <label for="jobtitle">Job Title</label>
+        <label htmlFor="jobtitle">Job Title</label>
         <input
           type="text"
           name="jobTitle"
@@ -99,7 +99,7 @@ export default function Form(props) {
         />
       </div>
       <div className="form-group">
-        <label for="programmingLanguages">
+        <label htmlFor="programmingLanguages">
           Programming Languages (e.g., Python, JavaScript)
         </label>
         <input

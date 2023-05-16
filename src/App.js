@@ -7,7 +7,7 @@ function App() {
   const [coverLetterContent, setCoverLetterContent] = useState("Test");
   return (
     <div className="App">
-      <h1>Generate Your Cover Letter</h1>
+      <h1 className="mt-5">Generate Your Cover Letter</h1>
       <Form setCoverLetterContent={setCoverLetterContent} />
       <CoverLetter coverLetterContent={coverLetterContent} />
     </div>
